@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,7 @@
             background: var(--tg-theme-bg-color);
         }
 
-        #main (
+        #main {
             width: 100%;
             padding: 20px;
             text-align: center;
@@ -101,7 +101,7 @@
         let buy = document.getElementById("buy");
         let order = document.getElementById("order");
         tg.expand();
-        
+
         buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
@@ -125,14 +125,14 @@
                 document.getElementById("error").innerText = 'Ошибка в номере телефона';
                 return;
             }
-            
+
             let data = {
-                name: name;
-                email: email;
-                phone: phone;
+                name: name,
+                email: email,
+                phone: phone,
             }
             tg.sendData(JSON.stringify(data));
-            
+
             tg.close();
         });
     </script>
